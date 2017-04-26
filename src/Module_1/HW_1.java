@@ -1,7 +1,7 @@
 package Module_1;
 
 import java.util.Scanner;
-
+//github
 /**
  * Created by denis on 26.04.2017.
  */
