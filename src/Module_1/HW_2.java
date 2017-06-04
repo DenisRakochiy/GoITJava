@@ -10,9 +10,8 @@ import java.util.Scanner;
 public class HW_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int count = 5;
-        int[] arr = new int[count];
-            for (int i=0; i<5; i++){
+        int[] arr = new int[5];
+            for (int i=0; i<arr.length; i++){
                 System.out.println("Enter number "+(i+1));
                 arr[i] = sc.nextInt();
             }
