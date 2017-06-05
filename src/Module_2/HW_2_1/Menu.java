@@ -7,12 +7,12 @@ import java.util.Scanner;
  */
 
 public class Menu {
-    private static Scanner scanner = new Scanner(System.in);
-    private static ArrayHolder arrayHolder;
-    private static int option;
-    private static boolean exit = false;
+    private Scanner scanner = new Scanner(System.in);
+    private ArrayHolder arrayHolder;
+    private int option;
+    private boolean exit = false;
 
-    private static int message(String query) {
+    private int message(String query) {
         System.out.println(query);
         while (true) {
             try {
@@ -23,22 +23,22 @@ public class Menu {
         }
     }
 
-    private static int enterArraySize() {
+    private int enterArraySize() {
         int size;
         while ((size = message("Enter array size: ")) < 1) {
         }
         return size;
     }
 
-    private static void createArray() {
+    private void createArray() {
         int[] array = new int[enterArraySize()];
         for (int i = 0; i < array.length; i++) {
-            array[i] = message("array index [" + (i + 1) +"]");
+            array[i] = message("array index [" + (i + 1) + "]");
         }
         arrayHolder = new ArrayHolder(array);
     }
 
-    private static void printMenu() {
+    private void printMenu() {
         System.out.println("=======================");
         System.out.println("Make a choice!");
         System.out.println("1. Print array");
@@ -50,7 +50,7 @@ public class Menu {
         System.out.println("=======================");
     }
 
-    private static void runFindIndexOfArray() {
+    private void runFindIndexOfArray() {
         int index = -1;
         int number = message("Enter a number: ");
         StringBuilder builder = new StringBuilder();
@@ -66,36 +66,36 @@ public class Menu {
         }
     }
 
-    private static void runSortMenuAZ() {
+    private void runSortMenuAZ() {
         arrayHolder.sortArrayAZ();
         System.out.println("Array was sorted by A to Z");
         arrayHolder.printArray();
     }
 
-    private static void runSortMenuZA() {
+    private void runSortMenuZA() {
         arrayHolder.sortArrayZA();
         System.out.println("Array was sorted by A to Z");
         arrayHolder.printArray();
     }
 
-    private static void runPrintArray() {
+    private void runPrintArray() {
         arrayHolder.printArray();
     }
 
-    private static void runExitMenu() {
+    private void runExitMenu() {
         System.out.println("Good Bye!");
         scanner.close();
         exit = true;
     }
 
-    private static void makeOption() {
+    private void makeOption() {
         do {
             option = message("Your option menu is ... ");
         } while (option < 1 || option > 6);
     }
 
 
-    private static void runMenu() {
+    private void runMenu() {
         switch (option) {
             case 1:
                 runPrintArray();
@@ -117,7 +117,7 @@ public class Menu {
         }
     }
 
-    public static void startApp() {
+    public void startApp() {
         createArray();
         while (true) {
             printMenu();

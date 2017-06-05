@@ -6,6 +6,7 @@ package Module_2.HW_2_1;
 
 public class ConsoleStart {
     public static void main(String[] args) {
-        Menu.startApp();
+        Menu menu = new Menu();
+        menu.startApp();
     }
 }

@@ -7,6 +7,7 @@ import java.util.Arrays;
  */
 
 public class ArrayHolder {
+
     private int[] array;
 
     public ArrayHolder(int[] array) {
